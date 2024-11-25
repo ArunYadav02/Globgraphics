@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F4F2F3; /* Light mode background - White Smoke */
+  color: #2C2C2C; /* Light mode text - Neutral Gray */
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+body.dark {
+  background-color: #1E293B; /* Dark mode background - Midnight Blue */
+  color: #E5E7EB; /* Dark mode text - Off-White */
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
+  background-color: #F4F2F3; /* Light mode softer background */
+}
+
+.app.dark {
+  background-color: #1E293B; /* Dark mode darker background */
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.sort-dropdown {
+  color: #2C2C2C; /* Light mode dropdown text */
+  background-color: #D3B88C; /* Light mode dropdown background - Tan */
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+}
+
+.app.dark .sort-dropdown {
+  color: #E5E7EB; /* Dark mode dropdown text */
+  background-color: #2C3E50; /* Dark mode dropdown background */
+}
+
+.header {
+  background: linear-gradient(90deg, #F4F2F3, #D3B88C); /* Light mode header gradient */
+  color: #2C2C2C; /* Light mode header text */
+  text-align: center;
+  padding: 1.8rem;
+  border-radius: 8px;
+}
+
+.app.dark .header {
+  background: linear-gradient(90deg, #2C3E50, #1E293B); /* Dark mode header gradient */
+  color: #E5E7EB; /* Dark mode header text */
+}
+
+.header img {
+  mix-blend-mode: multiply;
+  border-radius: 50%;
+  width: 180px;
+  height: 200px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.app.dark .header h1 {
+  color: #E5E7EB; /* Dark mode header text */
+}
+
+.search-container {
+  width: 400px;
+  margin: 1.5rem auto 0;
+}
+
+.search-input {
+  width: 50%;
+  padding: 0.75rem;
+  border: 1px solid #D3B88C; /* Light mode border - Tan */
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  background-color: #F4F2F3; /* Light mode input background */
+  color: #2C2C2C; /* Light mode input text */
+}
+
+.search-input:focus {
+  border-color: #D3B88C; /* Light mode border focus */
+  outline: none;
+}
+
+.app.dark .search-input {
+  background-color: #2C3E50; /* Dark mode input background */
+  color: #E5E7EB; /* Dark mode input text */
+  border-color: #4C566A; /* Dark mode border */
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #FFFFFF; /* Light mode card background */
+  color: #2C2C2C;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.app.dark .main-content {
+  background-color: #1E293B; /* Dark mode card background */
+  color: #E5E7EB; /* Dark mode text */
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.country-card {
+  background-color: #F4F2F3; /* Light mode card background */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.app.dark .country-card {
+  background-color: #2C3E50; /* Dark mode card background */
+}
+
+.country-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.app.dark .country-card:hover {
+  background: #3A506A; /* Dark mode hover background */
+}
+
+.country-card.selected {
+  border: 2px solid #D3B88C; /* Light mode selected card border */
+}
+
+.app.dark .country-card.selected {
+  border: 2px solid #FF6464; /* Dark mode selected card border */
+}
+
+.flag-container {
+  width: 100%;
+  height: 160px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.flag-container:hover .country-flag {
+  transform: scale(1.05);
+}
+
+.country-flag {
+  width: 90%;
+  border-radius: 9px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  background-color: #F4F2F3;
+}
+
+.app.dark .country-flag {
+  background-color: #1E293B; /* Dark mode flag background */
+}
+
+.country-info {
+  margin-top: 25px;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #FFFFFF; /* Light mode text background */
+}
+
+.app.dark .country-info {
+  background-color: #1E293B; /* Dark mode text background */
+}
+
+.country-info h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #2C2C2C; /* Light mode heading text */
+}
+
+.app.dark .country-info h3 {
+  color: #E5E7EB; /* Dark mode heading text */
+}
+
+.country-info p {
+  color: #7A6850; /* Light mode muted text */
+  margin-bottom: 0.25rem;
+}
+
+.app.dark .country-info p {
+  color: #D3D3D3; /* Dark mode muted text */
+}
+
+.favorite-button {
+  background-color: #D3B88C; /* Light mode button background */
+  color: #2C2C2C; /* Light mode button text */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.app.dark .favorite-button {
+  background-color: #FF6464; /* Dark mode button background */
+  color: #E5E7EB; /* Dark mode button text */
+}
+
+.favorite-button.added {
+  background-color: #E37C7C; /* Light mode added favorite button */
+}
+
+.app.dark .favorite-button.added {
+  background-color: #FF6464; /* Dark mode added favorite button */
+}
+
+.favorite-button:hover {
+  background-color: #D3B88C; /* Hover effect for button */
+  transform: scale(1.05);
+}
+
+
+.action-button {
+  background-color: #D3B88C; /* Light mode button background */
+  color: #2C2C2C; /* Light mode button text */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.app.dark .action-button {
+  background-color: #56D3D8; /* Dark mode button background */
+  color: #1E293B; /* Dark mode button text */
+}
+
+.action-button:hover {
+  background-color: #E3C29B; /* Hover effect for button */
+  transform: scale(1.05);
+}
+.remove-button {
+  background-color: #f44336; /* Red button */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 1024px) {
+  .countries-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .countries-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .countries-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
