@@ -3,9 +3,6 @@ It integrates population data, country flags, and capitals with dynamic features
 The application offers a dual-mode theme (light/dark), responsive design, and a choice between line and bar chart visualizations.
 
 Key Features:
-
-
-
 --Frontend (React):
 
     -  Interactive search and filtering by country or capital.
