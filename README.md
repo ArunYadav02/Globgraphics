@@ -2,6 +2,7 @@ Globgraphics is an interactive React and Node.js-based web application that prov
 It integrates population data, country flags, and capitals with dynamic features such as search, sorting, and favoriting.
 The application offers a dual-mode theme (light/dark), responsive design, and a choice between line and bar chart visualizations.
 
+
 Key Features:
 --Frontend (React):
 
